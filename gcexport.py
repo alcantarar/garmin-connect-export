@@ -957,7 +957,7 @@ def main(argv):
         for actvty in activities:
             if args.start_activity_no and current_index < args.start_activity_no:
                 pass
-                Display which entry we're skipping.
+                # Display which entry we're skipping.
                 print('Skipping Garmin Connect activity ', end='')
                 print('(', current_index, '/', total_to_download, ') ', sep='', end='')
                 print('[', actvty['activityId'], ']', sep='')
