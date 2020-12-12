@@ -806,7 +806,7 @@ def export_data_file(activity_id, activity_details, args, file_time, append_desc
                     if file_time:
                         os.utime(new_name, (file_time, file_time))
                 zip_file.close()
-            else:
+#             else:
 #                 print('\tSkipping 0Kb zip file.')
             os.remove(data_filename)
 
@@ -958,9 +958,9 @@ def main(argv):
             if args.start_activity_no and current_index < args.start_activity_no:
                 pass
                 # Display which entry we're skipping.
-                print('Skipping Garmin Connect activity ', end='')
-                print('(', current_index, '/', total_to_download, ') ', sep='', end='')
-                print('[', actvty['activityId'], ']', sep='')
+#                 print('Skipping Garmin Connect activity ', end='')
+#                 print('(', current_index, '/', total_to_download, ') ', sep='', end='')
+#                 print('[', actvty['activityId'], ']', sep='')
             else:
                 # Display which entry we're working on.
                 print('Garmin Connect activity ', end='')
