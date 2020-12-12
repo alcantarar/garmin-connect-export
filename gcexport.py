@@ -481,9 +481,9 @@ def login_to_garmin_connect(args):
     Perform all HTTP requests to login to Garmin Connect.
     """
     if python3:
-        username = args.username if args.username else input('Username: ')
+        username = args.username if args.username else input('Garmin Account Email: ')
     else:
-        username = args.username if args.username else raw_input('Username: ')
+        username = args.username if args.username else raw_input('Garmin Account Email: ')
     password = args.password if args.password else getpass()
 
     logging.debug("Login params: %s", urlencode(DATA))
@@ -522,7 +522,7 @@ def login_to_garmin_connect(args):
     match = pattern.match(login_response)
     if not match:
         raise Exception('Couldn\'t find ticket in the login response. Cannot log in. '
-                        'Did you enter the correct username and password?')
+                        'Did you enter the correct email and password?')
     login_ticket = match.group(1)
     print(' Done. Ticket=', login_ticket, sep='')
 
