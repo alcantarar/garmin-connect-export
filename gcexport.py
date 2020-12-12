@@ -852,7 +852,7 @@ def main(argv):
     args = parse_arguments(argv)
     logging_verbosity(args.verbosity)
 
-    print('Welcome to Garmin Connect Exporter!')
+#     print('Welcome to Garmin Connect Exporter!')
 
     # Create directory for data files.
     if os.path.isdir(args.directory):
