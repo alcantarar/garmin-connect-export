@@ -807,7 +807,7 @@ def export_data_file(activity_id, activity_details, args, file_time, append_desc
                         os.utime(new_name, (file_time, file_time))
                 zip_file.close()
             else:
-                print('\tSkipping 0Kb zip file.')
+#                 print('\tSkipping 0Kb zip file.')
             os.remove(data_filename)
 
 
